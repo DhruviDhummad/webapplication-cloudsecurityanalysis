@@ -25,10 +25,21 @@ sensitive infrastructure details.
 ---
 
 ## Evidence
-Screenshot captured from the AWS GuardDuty console
-showing the finding type and severity.
 
-![GuardDuty Evidence](../screenshots/guardduty-finding.png)
+Multiple AWS GuardDuty findings were identified during the monitoring period.
+
+### SSH Brute Force Attempts
+![SSH Brute Force](../screenshots/guardduty-ssh-bruteforce.png)
+![SSH Brute Force (Additional)](../screenshots/guardduty-ssh-bruteforce-2.png)
+
+### RDP Brute Force Attempt
+![RDP Brute Force](../screenshots/guardduty-rdp-bruteforce.png)
+
+### EC2 Instance Probing
+![EC2 Probing](../screenshots/guardduty-ec2-probed.png)
+
+### RDS Database Access Attempt
+![RDS Database Activity](../screenshots/guardduty-rds-database.png)
 
 ---
 
