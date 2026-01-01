@@ -1,23 +1,28 @@
 # Web Application Security Assessment – Talentin
 
-This repository documents an **authorized internal web application security assessment**
-of app.talentin.ai conducted as part of security learning and improvement efforts.
+This repository documents an **authorized internal security assessment**
+of app.talentin.ai conducted to evaluate both application-level and
+cloud-level security risks.
 
-The assessment focuses on identifying common web security misconfigurations and risks
-using industry-standard tools and methodologies.
+The assessment combines manual web application testing with
+cloud activity monitoring to provide a comprehensive view of the
+overall security posture.
 
 ---
 
 ## Scope
 - Target: app.talentin.ai
+- Environment: AWS cloud infrastructure supporting the application
 - Testing type: Passive and low-impact testing
-- Focus areas:
-  - HTTP security headers
-  - Authentication and session handling
-  - Input validation (non-destructive)
 
-Out-of-scope activities include denial-of-service, data destruction,
-and aggressive automated exploitation.
+### Focus Areas
+- HTTP security headers and configuration
+- Authentication and session handling
+- Basic input validation (non-destructive)
+- Cloud security monitoring using AWS GuardDuty
+
+Activities such as denial-of-service, brute-force attacks, and
+destructive testing were explicitly excluded.
 
 ---
 
@@ -25,33 +30,36 @@ and aggressive automated exploitation.
 The assessment follows structured security testing practices aligned with
 :contentReference[oaicite:0]{index=0} Top 10 principles.
 
-Each finding includes:
-- Tested endpoint
+Application-layer testing was performed using manual request and response
+analysis, while cloud-level risks were identified through continuous
+monitoring of AWS activity.
+
+Each documented finding includes:
+- Tested component or service
 - Tool used
 - Evidence (screenshots)
 - Risk assessment
 - Remediation recommendation
 
-Detailed testing steps are documented in the `methodology/` directory.
-
 ---
 
 ## Tools Used
-- Burp Suite – HTTP interception and response analysis
+- Burp Suite – Web application traffic interception and analysis
 - Kali Linux – Security testing environment
-- Browser Developer Tools
+- Browser Developer Tools – Client-side inspection
+- AWS GuardDuty – Cloud-level threat detection and monitoring
 
 ---
 
 ## Repository Structure
-- `methodology/` – Detailed test cases and findings
+- `methodology/` – Detailed test cases and practical findings
 - `reports/` – Executive-level summaries
 - `screenshots/` – Evidence collected during testing
-- `authorization.md` – Statement of testing authorization
+- `authorization.md` – Authorization statement
 - `scope.md` – Defined testing boundaries
 
 ---
 
 ## Disclaimer
-This assessment was performed **with authorization** and is intended
-for educational and internal security improvement purposes only.
+This assessment was conducted **with authorization** and is intended
+solely for internal security improvement and educational purposes.
