@@ -11,3 +11,8 @@
 
 - Browser Developer Tools  
   Used for inspecting client-side behavior and requests.
+  
+  - AWS GuardDuty  
+  Used for cloud-level threat detection and monitoring during the assessment.
+
+
